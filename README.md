@@ -32,27 +32,4 @@ To recognize spoken commands, we recorded ~40 samples each of four words — **"
 
 ## Report
 
-[`report/lab_report_system_id_controls_classification.pdf`](report/lab_report_system_id_controls_classification.pdf) is our full written report, covering system identification, control theory, and classification design decisions in detail.
-
-## Repo structure
-
-```
-├── README.md
-├── media/
-│   └── demo_final_run.mp4                            # final demo video
-├── report/
-│   └── lab_report_system_id_controls_classification.pdf   # written report
-├── lab06_system_identification/
-│   ├── motor_dynamics_sweep.ino                      # PWM sweep + encoder logging firmware
-│   └── eecs16b_lab6_handout.pdf                      # course lab handout (reference)
-├── lab08_classification/
-│   ├── audio_classifier.ino                          # PCA-based voice command classifier firmware
-│   └── classification_analysis.html                  # PCA/SVD analysis notebook (exported)
-└── lab09_integration_final_demo/
-    ├── integration_final.ino                         # final combined listen → classify → drive firmware
-    └── integration_analysis.ipynb                    # integration validation notebook
-```
-
-## Course context
-
-EECS 16B: Designing Information Devices and Systems II, UC Berkeley, Spring 2024. `eecs16b_lab6_handout.pdf` in this repo is official course material included for reference; all other files are our own work.
+[`report/report_system_id_controls_classification.pdf`](report/report_system_id_controls_classification.pdf) is our full written report, covering system identification, control theory, and classification design decisions in detail.
