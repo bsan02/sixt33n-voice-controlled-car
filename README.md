@@ -16,7 +16,7 @@ The project was built up in three stages, each addressed in its own lab, before 
 
 Before the car can be controlled, its motors need to be characterized. We swept a range of PWM duty cycles to each wheel and measured the resulting wheel velocity via onboard encoders (`motor_dynamics_sweep.ino`), then fit a linear model `v = θ·PWM + β` per wheel. Theta (θ) captures how sensitive velocity is to PWM input; beta (β) captures the real-world offset from static friction and wheel imbalance. Our fitted values were θ_left = 0.3811, θ_right = 0.4371, β_left = -16.8, β_right = -9.645 — the asymmetry between the two wheels is exactly why open-loop control isn't enough on its own.
 
-`Lab6_Handout.pdf` is the original EECS 16B lab handout for reference.
+`eecs16b_lab6_handout.pdf` is the original EECS 16B lab handout for reference.
 
 ### 2. Closed-loop control
 
@@ -32,27 +32,27 @@ To recognize spoken commands, we recorded ~40 samples each of four words — **"
 
 ## Report
 
-[`report/Lab_Report_Labs6-8_SystemID_Controls_Classification.pdf`](report/Lab_Report_Labs6-8_SystemID_Controls_Classification.pdf) is our full written report, covering system identification, control theory, and classification design decisions in detail.
+[`report/lab_report_system_id_controls_classification.pdf`](report/lab_report_system_id_controls_classification.pdf) is our full written report, covering system identification, control theory, and classification design decisions in detail.
 
 ## Repo structure
 
 ```
 ├── README.md
 ├── media/
-│   └── demo_final_run.mp4                                          # final demo video
+│   └── demo_final_run.mp4                            # final demo video
 ├── report/
-│   └── Lab_Report_Labs6-8_SystemID_Controls_Classification.pdf     # written report
+│   └── lab_report_system_id_controls_classification.pdf   # written report
 ├── lab06_system_identification/
-│   ├── motor_dynamics_sweep.ino                                    # PWM sweep + encoder logging firmware
-│   └── Lab6_Handout.pdf                                            # course lab handout (reference)
+│   ├── motor_dynamics_sweep.ino                      # PWM sweep + encoder logging firmware
+│   └── eecs16b_lab6_handout.pdf                      # course lab handout (reference)
 ├── lab08_classification/
-│   ├── audio_classifier.ino                                        # PCA-based voice command classifier firmware
-│   └── classification_analysis.html                                # PCA/SVD analysis notebook (exported)
+│   ├── audio_classifier.ino                          # PCA-based voice command classifier firmware
+│   └── classification_analysis.html                  # PCA/SVD analysis notebook (exported)
 └── lab09_integration_final_demo/
-    ├── integration_final.ino                                       # final combined listen → classify → drive firmware
-    └── integration_analysis.ipynb                                  # integration validation notebook
+    ├── integration_final.ino                         # final combined listen → classify → drive firmware
+    └── integration_analysis.ipynb                    # integration validation notebook
 ```
 
 ## Course context
 
-EECS 16B: Designing Information Devices and Systems II, UC Berkeley, Spring 2024. `Lab6_Handout.pdf` in this repo is official course material included for reference; all other files are our own work.
+EECS 16B: Designing Information Devices and Systems II, UC Berkeley, Spring 2024. `eecs16b_lab6_handout.pdf` in this repo is official course material included for reference; all other files are our own work.
